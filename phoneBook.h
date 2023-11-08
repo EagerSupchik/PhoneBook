@@ -33,7 +33,12 @@ public:
 		{
 			if (strcmp(i->getname(), name) == 0)
 			{
-				return &(*i);
+				//return &(*i);
+				cout << "Name: " << i->getname() << endl;
+				cout << "HP: " << i->gethp() << endl;
+				cout << "WP: " << i->getwp() << endl;
+				cout << "MP: " << i->getmp() << endl;
+				cout << "ADDS:" << i->getadds() << endl;
 			}
 		}
 		return nullptr;
@@ -43,11 +48,12 @@ public:
 	{
 		for (const auto& contact : contacts)
 		{
-			cout << "Name: " << contact.getname() << endl;
-			cout << "DT: " << contact.gethp() << endl;
-			cout << "WT: " << contact.getwp() << endl;
-			cout << "MT: " << contact.getmp() << endl;
-			cout << "ADDS: " << contact.getadds() << endl;
+			cout << "ФИО: " << contact.getname() << endl;
+			cout << "Домашний телефон: " << contact.gethp() << endl;
+			cout << "Рабочий телефон: " << contact.getwp() << endl;
+			cout << "Мобильный телефон: " << contact.getmp() << endl;
+			cout << "Доп. информация: " << contact.getadds() << endl;
+			cout << endl;
 		}
 	}
 
@@ -75,21 +81,26 @@ public:
 		{
 			contacts.clear();
 
-			char name[255];
+			char name[250];
 			int home, work, mobile;
-			char adds[255];
+			char adds[250];
 
-			while (file.getline(name, 255))
+			while (file.getline(name, 250))
 			{
 				file >> home >> work >> mobile;
 				file.ignore();
-				file.getline(adds, 255);
+				file.getline(adds, 250);
 
 				Contacts contact(name, home, work, mobile, adds);
 				contacts.push_back(contact);
 			}
 		}
 		file.close();
+	}
+
+	void del()
+	{
+		contacts.clear();
 	}
 };
 

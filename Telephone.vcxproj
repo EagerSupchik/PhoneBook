@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="Contacts.h" />
     <ClInclude Include="phoneBook.h" />
+    <ClInclude Include="test.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="phonebook.txt" />

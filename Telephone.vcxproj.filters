@@ -26,6 +26,9 @@
     <ClInclude Include="phoneBook.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="test.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="phonebook.txt" />

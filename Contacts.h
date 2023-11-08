@@ -33,12 +33,6 @@ public:
 		strcpy_s(adds, strlen(add)+1, add);
 	}
 
-	~Contacts()
-	{
-		delete[] fullname;
-		delete[] adds;
-	}
-
 	inline void setname(const char* name) 
 	{
 		delete[] fullname;
